@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="135dp"
+    android:layout_margin="6dp"
+    android:background="#B1AAAA"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.8"
+            android:layout_marginLeft="10dp"
+
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:id="@+id/imgFoodImage"
+                android:layout_width="115dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_veg" />
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/middle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.8">
+
+            <ImageView
+                android:id="@+id/vegSym"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:paddingStart="10dp"
+                android:paddingRight="10dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_veg" />
+            <ImageView
+                android:id="@+id/arrowDown"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/menuName"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_arrowdown"
+                />
+            <TextView
+                android:id="@+id/menuName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/vegSym"
+                android:layout_marginTop="20dp"
+                android:padding="2dp"
+                android:text="Kadhai Paneer"
+                android:textColor="#100F0F"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/txtRupeeSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/menuName"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:padding="2dp"
+                android:text="Rs."
+                android:textColor="#070707"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPerPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/menuName"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@id/txtRupeeSign"
+                android:padding="2dp"
+                android:text="150"
+                android:textColor="#101010"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="66dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4">
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="30dp"
+                android:checked="true"
+                android:textOff="OFF"
+                android:textOn="ON"/>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/llContent"
+        android:background="#b5b5b5" />
+
+
+
+</androidx.cardview.widget.CardView>

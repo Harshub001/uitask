@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_border"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    >
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/location_image" />
+
+    <TextView
+        android:id="@+id/enablelocation"
+        android:text="               Enable your location"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="15dp"
+        android:textSize="20sp"
+        android:padding="6dp"
+        android:textColor="#050505"
+        />
+
+    <EditText
+        android:id="@+id/zipcode"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enablelocation"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="140dp"
+        android:maxLines="1"
+        android:maxLength="6"
+        android:inputType="number"
+        android:background="#ffffff"/>
+    <TextView
+        android:id="@+id/zipcodeleft"
+        android:text="Zip code"
+        android:textStyle="bold"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/enablelocation"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+
+        android:textSize="13sp"
+        android:padding="6dp"
+        />
+
+    <TextView
+        android:id="@+id/zipcoderight"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/enablelocation"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/zipcode"
+        android:text="Submit"
+        android:textColor="#3F51B5"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/or_l"
+        android:layout_below="@id/zipcode"
+        android:layout_width="120dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:id="@+id/or_m"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zipcode"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/or_l"
+        android:layout_marginLeft="20dp"
+        android:text="OR"
+        android:textSize="13dp"
+        android:textColor="#554F4F"/>
+
+    <View
+        android:id="@+id/or_r"
+        android:layout_width="120dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/zipcode"
+        android:layout_toEndOf="@+id/or_m"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/darker_gray" />
+    <Button
+        android:id="@+id/btncurrentloc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/or_l"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/rounded_button"
+        android:drawableLeft="@drawable/ic_location"
+        android:text="Use current location"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        />
+
+    <TextView
+        android:id="@+id/skipfornow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip for now"
+        android:textStyle="bold"
+        android:padding="6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"/>
+
+</RelativeLayout>

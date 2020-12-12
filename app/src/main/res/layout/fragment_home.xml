@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C4E6E2E2"
+    tools:context=".HomeFragment">
+<LinearLayout
+    android:id="@+id/lLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="20dp"
+    android:weightSum="2"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    >
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        android:background="#ffffff"
+        android:paddingRight="20dp"
+        >
+
+        <TextView
+            android:id="@+id/dishesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="256"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/updatedDishes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dishesCount"
+            android:paddingTop="2dp"
+            android:paddingLeft="10dp"
+            android:text="Updated Dishes"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/ic_upload" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/sellCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="925"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sellDishes"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_below="@+id/sellCount"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:text="Sell Count"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_profit"
+            android:paddingTop="15dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="15dp"/>
+    </RelativeLayout>
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/lLayout2"
+        android:layout_below="@id/lLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:weightSum="2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+    <LinearLayout android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:weightSum="3"
+        android:background="#ffffff"
+        android:layout_marginRight="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:paddingTop="26dp"
+            android:text="Filter By"
+            android:background="#ffffff"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_calender"
+            />
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:textOff="OFF"
+            android:textOn="ON"/>
+    </LinearLayout>
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:background="#23E6E2E2">
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:switchMinWidth="56dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="ALL ITEMS:"
+                android:checked="true"
+                android:textOff="OFF"
+                android:textOn="ON"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMenu"
+        android:layout_below="@+id/lLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:paddingTop="20dp"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:paddingRight="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerMenu"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            android:paddingTop="4dp"
+            android:drawableLeft="@drawable/ic_plus"
+            android:text="ADD ITEM"
+            android:layout_centerInParent="true"
+            android:shadowColor="@color/pink"
+            style="@android:style/Animation"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
